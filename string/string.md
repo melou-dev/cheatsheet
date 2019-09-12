@@ -80,9 +80,9 @@ if (~str.indexOf(~str.indexOf(`str`)) // Biwise, convertion en 32-bit -(n+1), n 
 
 | méthode | sélections | nombres négatifs |
 | ------- | ---------- | ---------------- |
-| **str.slice(start [, end])**  | début, fin(non inclu et optionnel) | négatifs acceptés |
-| **str.substring(start, end)** | entre début, fin | valeur négative non accepté et processé comme 0 |
-| **str.substr(start, length)** | début, amplitude | négatifs acceptés pour le début |
+| str.slice(start [, end]) | début, fin(non inclu et optionnel) | négatifs acceptés |
+| str.substring(start, end) | entre début, fin | valeur négative non accepté et processé comme 0 |
+| str.substr(start, length) | début, amplitude | négatifs acceptés pour le début |
 
 Slice est le plus flexible et le plus court.
 
