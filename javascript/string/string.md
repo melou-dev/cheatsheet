@@ -37,7 +37,7 @@ voir la page MDN (lien ci-dessus)
 return( "Interface".toUpperCase() ); // INTERFACE 
 return( "Interface"[0]).toLowerCase() ); // i, car sélection du "i" avec [0]
 ```
-
+sert aussi à uniformiser pour éviter la casse lors qu'on le procéde - case-insensitive
 
 ## Méthode - accéder aux caractères (retoune un caractère)
 
@@ -140,6 +140,7 @@ emplitude = 2
 
 **str.trim()** // enlève les espaces début et fin de string.
 **str.repeat(n)** // répète le string n fois.
+**strtotal.includes(str)**// si str est inclue dans total - true/false.
 
 
 
