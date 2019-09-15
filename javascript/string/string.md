@@ -18,7 +18,8 @@ func"string" return (`1 + 2 = ${sum(1, 2)}.`);
 
 ## caractères spéciaux
 
-tous commencent avec **\**.
+tous commencent avec **\ **.
+
 voir la page MDN (lien ci-dessus)
 
 
@@ -31,6 +32,7 @@ voir la page MDN (lien ci-dessus)
 ## Méthode - Remplacer Majuscule/Minuscule.
 
 **toLowerCase()** - majuscule.
+
 **toUpperCase()** - minuscule.
 
 ```
@@ -54,6 +56,7 @@ return( str[0] ); // H
 ## Méthode - accéder à la position (retourne une position un nombre)
 
 **str.indexOf(substr,pos)** - retourne le numéro du 1er caractère de la sélection.
+
 **str.lastIndexOf(substr,pos)** - même chose mais part du dernier caractère.
 
 ```
@@ -71,7 +74,9 @@ if (~str.indexOf(~str.indexOf(`str`)) // Biwise, convertion en 32-bit -(n+1), n 
 ## Méthodes - match - rechercher l'existance du/des caractères (retourne en boolean).
 
 **str.includes(substr, pos)** - moderne, recherche si `substr` est dans `str`, position optionnelle.
+
 **str.startsWith(substr)** - match le début.
+
 **str.endsWith** - match la fin.
 
 
@@ -108,6 +113,7 @@ UTF-16 - table numérique pour les comparaisons.
 ### Méthode pour créer un caractère à partir du numétique.
 
 **str.fromCodePoint(position)**
+
 **alert ( `\u---`)** // système hexadecimal
 
 ```
@@ -133,14 +139,22 @@ alert( str );
 ## Méthode - Unicodes, hiéroglyphs et emojis.
 
 emplitude = 2
+
 **str.fromCodePoint()**
+
 **str.codePointAt()**
 
 ## autres méthodes utiles.
 
 **str.trim()** // enlève les espaces début et fin de string.
+
 **str.repeat(n)** // répète le string n fois.
+
 **strtotal.includes(str)**// si str est inclue dans total - true/false.
+
+**bool.toString()**// retourne un boolean en string.
+
+
 
 
 
