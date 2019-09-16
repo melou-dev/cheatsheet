@@ -135,4 +135,70 @@ return( String(arr) === `1,2,3` ); // true
 **A SAVOIR** : l'addition d'array concatène [1,2] + 3 // "1,23".
 
 
+## Méthodes.
+
+### splice = insérer, retirer et replacer des éléments. 
+
+```
+arr.splice(1, 1); // à partir de l'index 1, retirer 1 élément.
+
+arr.splice(0, 3, "a", "b"); //à partir de l'index 0, retiter 3 éléments et remplacer par "a" et "b".
+
+arr.splice(2, 0, "a", "b"); //à partir de 2 insérer "a" et "b" sans rien retirer.
+
+arr.splice(-1, 0, "a", "b"); //partir de l'index -1, la fin, retirer aucun élément et insérer "a" et "b".
+```
+
+
+### slice = copier.
+
+```
+arr.slice(1, 3); // copier de l'index 1 à l'index 3.
+
+arr.slice(-2); // copier de l'index -2 jusqu'à la fin.
+```
+
+
+### concat = concaténer.
+
+```
+let arr = [1, 2];
+
+return( arr.concat([3, 4])); //1,2,3,4.
+return( arr.concat([3, 4], [5,6])); // 2 array - 1,2,3,4,5,6.
+return( arr.concat([3, 4], 5, 6)); //2 éléments - 1,2,3,4,5,6.
+```
+
+
+### Iterate; forEach = itérer.
+
+Actionner un fonction pour chaque élément du tableau.
+
+```
+arr.forEach(function(item, index, array) {
+    // à faire...
+})
+```
+
+
+### indexOf/lastIndexOf/incluses = chercher. opère sur les items.
+
+```
+let arr = [1, 0, false];
+
+return( arr.indexOf(0) ); // 1, situé à index 1
+return( arr.indexOf(false) ); // 2, situé à l'index 2
+return( arr.indexOf(null) ); // -1, si non trouvé, il trouve -1
+
+return( arr.includes(1) ); // true, voir si l'item est inclus et non la position exacte.
+```
+**A SAVOIR** - méthode de comparaison stricte ===, sauf si item est un "NaN" alors il retourne -1 par défaut, contrairement à la méthode "incluses" va trouver item et renvoyer true.
+
+### find et findIdex = pour une tableau d'objet.
+
+
+
+
+
+
 
