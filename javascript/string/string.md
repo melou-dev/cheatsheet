@@ -156,6 +156,18 @@ emplitude = 2
 
 
 
+Elever les espaces dans in string
+
+```
+x.replace(/\s/g,"");
+```
+
+/ est un délimiteur.
+
+\s correspond à tous les caractères espace: '\t', '\n', '\r', '\f', ' ', etc...
+
+g pour agir sur tout le string.
+str.replace() est la méthode pour remplacer un caractère ou chaîne de caractère par un autre.
 
 
 
