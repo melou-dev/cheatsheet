@@ -156,11 +156,13 @@ emplitude = 2
 
 
 
-Elever les espaces dans in string
+Elever les espaces dans un string
 
+tous les espaces
 ```
 x.replace(/\s/g,"");
 ```
+pour les espaces de début et de fin trim()
 
 / est un délimiteur.
 
