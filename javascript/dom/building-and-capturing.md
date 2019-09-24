@@ -67,7 +67,7 @@ Nous pouvons également utiliser la délégation d’événements pour ajouter d
 outil intéressant en JS :
 
 * **les +** :
-
+w up correctly.
 - gain de temps car moins de code.
 
 - gain de d'espace mémoire.
