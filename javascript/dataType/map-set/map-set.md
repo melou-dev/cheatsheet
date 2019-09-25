@@ -1,11 +1,11 @@
-# MAP - SET
-
-objects collections.
+# MAP - WEAKMAP - SET - WEAKSET
 
 - **Object** : ranger des données avec les clefs de type string.
 - **Array** : ranger des données de manière ordonnée indexer à partir de l'index 0.
 - **Map** : ranger des données de manière ordonnée par ordre d'arrivée avec des clefs de tous les types (string, number, boolean, object etc...)
+- **WeakMap** - ranger des données [clefs, valeurs] temporairement, les clefs sont uniquement des objets.
 - **set** : ranger des données sans clefs,de manière ordonnée par ordre d'arrivée, mode de rangement à donnée unique non duplicable. si deux données identiques la 2ème écrase la 1ère.
+- **Weakset** - ranger des données [valeurs] temporairement, les valeurs sont uniquements des objets
 
 ## MAP - méthodes et propriété.
 
@@ -116,3 +116,14 @@ let prices = Object.fromEntries([
 
 alert(prices.orange); // 2
 ```
+
+
+## WeakMap - WeakSet
+
+Non interable
+
+**weakMap/Set.get(key)**
+**weakMap/Set.set(key, value)**
+**weakMap/Set.delete(key)**
+**weakMap/Set.has(key)**
+
