@@ -11,6 +11,12 @@ function pow(x, n) {
   }
 }
 ```
+```
+function pow(x, n) {
+  return (n == 1) ? x : (x * pow(x, n - 1));
+}
+```
+
 même résultat que la loop
 
 ```
@@ -26,3 +32,12 @@ function pow(x, n) {
 ```
 
 ![recursion sheme](images/recursion-pow.svg)
+
+Quand un fonction fait un appel imbriqué, il ce passe ceci.
+
+* la fonction courante est stoppée.
+* Le contexte d'exécution qui lui est associé est mémorisé dans une structure de données spéciale appelée pile de contexte d'exécution (STACK)
+* l'appel imbriqué (fonction dans la fonction) est exécuté.
+* A la fin, l'ancien contexte d'exécution est extrait de la pile et la fonction externe reprend à l'endroit où elle s'est arrêtée.
+
+![Factorial exemple](images/javascript-recursion-function-image-exercise-1.png)
