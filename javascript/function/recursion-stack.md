@@ -40,4 +40,15 @@ Quand un fonction fait un appel imbriqué, il ce passe ceci.
 * l'appel imbriqué (fonction dans la fonction) est exécuté.
 * A la fin, l'ancien contexte d'exécution est extrait de la pile et la fonction externe reprend à l'endroit où elle s'est arrêtée.
 
+## Recursive Transversal.
+
+comme un arbre - stucture d'une entreprise
+
+exemples :
+
+![recursive transversal example](images/recursive-tranversal.png)
+
+
+## Factorial.
+
 ![Factorial exemple](images/javascript-recursion-function-image-exercise-1.png)
