@@ -11,3 +11,18 @@ function pow(x, n) {
   }
 }
 ```
+même résultat que la loop
+
+```
+function pow(x, n) {
+  let result = 1;
+
+  for (let i = 0; i < n; i++) {
+    result *= x;
+  }
+
+  return result;
+}
+```
+
+![recursion sheme](images/recursion-pow.svg)
