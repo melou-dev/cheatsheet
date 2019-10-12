@@ -27,7 +27,7 @@ avec `code .` ou `vim .` dans le terminal
 ## Ouvrir .gitignore
 
 * ouvrir le fichier **.gitignore**
-* desactiver la ligne / dist en mettant un **#** devant.
+* desactiver la ligne `/ dist` en mettant un **#** devant.
 
 ![screenshot .gitignore](https://github.com/melou-dev/cheatsheet/commit/41c521243cf054438339a9a81ea0b07738e41e1b)
 
