@@ -29,7 +29,7 @@ avec `code .` ou `vim .` dans le terminal
 * ouvrir le fichier **.gitignore**
 * desactiver la ligne `/ dist` en mettant un **#** devant.
 
-![screenshot .gitignore](https://github.com/melou-dev/cheatsheet/commit/41c521243cf054438339a9a81ea0b07738e41e1b)
+![screenshot gitignore](https://github.com/melou-dev/cheatsheet/blob/master/vue/images/screenshot-gitignore.png)
 
 
 ## Créer vue.config.js
@@ -45,7 +45,7 @@ module.exports = {
 }
 ```
 
-![screenshot vue.config.js](https://github.com/melou-dev/cheatsheet/commit/23839ee62e3d6c666d53ce66bb033d070c183dfe)
+![screenshot vue.config.js](https://github.com/melou-dev/cheatsheet/blob/master/vue/images/Screenshot%20vueconfigjs.png)
 
 
 ## Create deploy.sh
