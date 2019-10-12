@@ -34,4 +34,19 @@ avec `code .` ou `vim .` dans le terminal
 
 ## Create deploy.sh
 
+Créer un fichier **deploy.sh** depuis vscode ou vim.
+copier/coller le code ci-dessous et remplacer `myproject` par le nom de votre repo GitHub.
+
+```
+module.exports = {
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/my-project/'
+    : '/'
+}
+```
+
+![screenshot deploy.sh](https://github.com/melou-dev/cheatsheet/commit/3c4799a3211dd82aa5662dc28af19751d464aa35)
+
+
+
 
