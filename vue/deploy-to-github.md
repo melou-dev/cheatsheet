@@ -48,7 +48,7 @@ module.exports = {
 ![screenshot vue.config.js](https://github.com/melou-dev/cheatsheet/blob/master/vue/images/Screenshot%20vueconfigjs.png)
 
 
-## Create deploy.sh
+## Créer deploy.sh
 
 Créer un fichier **deploy.sh** depuis vscode ou vim.
 copier/coller le code ci-dessous et remplacer 
@@ -89,7 +89,7 @@ cd -
 
 Dans le terminal, depuis le projet : 
 
-* Add and commit project change and push into GitHub.
+* Add et commit les changements puis push into GitHub.
 
 * lancer les commandes `chmod +x deploy.sh` puis `./deploy.sh`.
 
