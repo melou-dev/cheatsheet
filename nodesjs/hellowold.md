@@ -2,13 +2,7 @@
 
 https://nodejs.org/en/docs/guides/getting-started-guide/
 
-## installer node js
-
-`npm outdated` voir si bonne version.
-
-`npm install -g npm`
-
-
+## installer ou mettre à jour node js
 
 Vérifier si à jour
 ```
@@ -87,4 +81,4 @@ Visiter http://localhost:3000
 
 Pour voir le 
 
-**Hello World** s'afficher.
+**Hello World** s'affiche.
