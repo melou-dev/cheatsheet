@@ -4,7 +4,7 @@
 
 `sudo su postgre`
 
-`psql`- entrer dans postgresql
+`psql`- entrer dans postgresql - installation de `pgcli` pour aide au commande
 
 `\l` - lister les bases de données
 
@@ -13,6 +13,8 @@
 `\q` - quitter postgresql
 
 `\?` - `help` - aide
+
+`\d` + dbname - afficher la base sans les données.
 
 
 ## commandes pour créer/supprimer une base de données.
@@ -44,3 +46,5 @@ un client n'est pas obligé de se connecter avec le rôle du même nom que son n
 `ALTER DATABASE databasename OWNER TO username;` - attribuer une base de données à un utilisateur ou groupe d'utilisateurs ex: test / toto
 
 `ALTER USER username WITH role;` - ex : toto / superuser
+
+`SELECT * FROM dbname;` - sélectionner une base de données.

@@ -41,3 +41,21 @@ alert( bed.glasses ); // 1
 alert( table.money ); // undefined
 ```
 
+## Prototypes Natifs
+
+
+Les méthodes sont stockés dans le prototype - Array.prototype, Object.prototype, Date.prototype, etc....
+
+Les objets qu'en à eux stockent seulement les valeurs ("data") - array items, object properties, the date.
+
+
+**Les primitifs** (number, string et bollean) stockent des méthodes dans les prototypes d' "wrapper objects " - Number.prototype,  String.prototype and Boolean.prototype.
+
+Ce qu''il faut principalement retenir est que les objet String, Number et Boolean existent et sont très utiles, mais ne doivent être en aucun cas être utilisés directement. 
+
+**Null** et **undefined** n'ont pas de "wrapper objects" et n'ont donc pas de méthode stockée.
+
+
+Les méthodes intégrées peuvent être modifiées ou compilées avec de nouvelles méthodes, mais ce n'est pas recommendé de les changer, sauf en cas d'intégration de nouveau standart JavaScript sur moteur ancien.
+
+![javascript-prototype-inheritance](/images/javascript-prototype-inheritance.png)
