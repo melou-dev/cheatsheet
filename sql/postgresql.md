@@ -1,20 +1,27 @@
-# postgresql
+ # postgresql
 
 ## commandes de base.
 
 `sudo su postgre`
 
-`psql`- entrer dans postgresql - installation de `pgcli` pour aide au commande
+`psql`- **entrer** dans postgresql - installation de `pgcli` pour aide au commande
+    dans le termninal : `plcli`
+    puis `\i + route + filename`
+        pour chercher la route, ouvrir un autre terminal, se mettre sur le dossier de la base de données
+        `pwd` pour copier la route puis rajouter le nom du fichier convenant de la base de données
+        puis `SELECT * FROM filename` pour afficher
 
-`\l` - lister les bases de données
+`\l` - **lister les bases de données**
 
-`\du` - lister les utilisateurs ou groupe d'utilisateurs et leurs rôles : mane / Superuser, Create role, Create DB, Replication, Bypass RLS
+`\du` - **lister les utilisateurs ou groupe d'utilisateurs et leurs rôles** : mane / Superuser, Create role, Create DB, Replication, Bypass RLS
 
-`\q` - quitter postgresql
+`\q` - **quitter** postgresql
 
-`\?` - `help` - aide
+`\?` - `help` - **demander de l'aide**
 
-`\d` + dbname - afficher la base sans les données.
+`\d` + dbname - **afficher la base sans les données**.
+
+`\c` + dbname - 
 
 
 ## commandes pour créer/supprimer une base de données.
@@ -48,3 +55,4 @@ un client n'est pas obligé de se connecter avec le rôle du même nom que son n
 `ALTER USER username WITH role;` - ex : toto / superuser
 
 `SELECT * FROM dbname;` - sélectionner une base de données.
+
