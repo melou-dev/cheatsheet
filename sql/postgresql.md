@@ -48,11 +48,26 @@ un client n'est pas obligé de se connecter avec le rôle du même nom que son n
 `createuser username;`
 `dropuser username;`
 
-`CREATE USER username WITH PASSWORD password;` - créer un utilisateur ou groupe d'utilisateurs.
+`CREATE USER username WITH PASSWORD 'password';` - créer un utilisateur ou groupe d'utilisateurs.
 
-`ALTER DATABASE databasename OWNER TO username;` - attribuer une base de données à un utilisateur ou groupe d'utilisateurs ex: test / toto
+`ALTER DATABASE databasename OWNER TO username;` - attribuer une base de données à un utilisateur ou groupe d'utilisateurs. ex: test / toto
 
 `ALTER USER username WITH role;` - ex : toto / superuser
 
 `SELECT * FROM dbname;` - sélectionner une base de données.
 
+Création de table.
+```
+CREATE TABLE Items ( 
+ id bigserial not null primary key, 
+ item varchar(200));
+```
+`SELECT * FROM "items";` - montrer la table en entier.
+
+`INSERT INTO Items(item) VALUES('bonjour');` - insérer une valeur "bonjour" dans un tableau appelé Items, colonne "item".
+
+`ALTER TABLE items ADD COLUMN "createdAt" timestamp;` ajouter la colonne date de création de nouvelle entrée à la table.
+
+`ALTER TABLE items ADD COLUMN "updatedAt" timestamp;` ajouter la colonne date de mise à jour d'une entrée dans la table.
+
+`ALTER TABLE items DROP COLUMN "columnname";` supprimer une colonne de la table.

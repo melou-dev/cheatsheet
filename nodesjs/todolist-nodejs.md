@@ -134,7 +134,7 @@ app.post("/", (req, res) => {
 En saisissant une entrée dans l'URL en input, il va apparaitre dans le terminal.
 Question : pourquoi "Form successfully transmitted apparaît-il dans la page et aussi dans postman ?
 
-## Préparer la base de donnée (postgreSQL)
+## 8 - Préparer la base de donnée (postgreSQL)
 
 sudo -i -u postgres
 ou
@@ -204,7 +204,7 @@ SELECT 1
 Time: 0.011s
 ```
 
-## Installer l'ORM Sequelize + initialisation de Sequelize + test de connection
+## 9 - Installer l'ORM Sequelize + initialisation de Sequelize + test de connection
 
 https://sequelize.org/v5/manual/getting-started.html
 
