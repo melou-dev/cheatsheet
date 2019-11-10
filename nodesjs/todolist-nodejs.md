@@ -109,7 +109,9 @@ app.post("/", (req, res) => {
 ```
 * commit
 
-## Cabler le formulaire avec la requête post
+## 7 - Cabler le formulaire avec la requête post
+
+Cette méthode est un analyseur de code. On indique dans le code: activer lorsque le page "/" est appelé la méthode POST pour input du formulaire nommé "item". On le teste ensuite dans le terminal.
 
 dans app.js après les "const"
 ```
@@ -127,7 +129,10 @@ tester input :
 ```
 app.post("/", (req, res) => {
     console.log(req.body.item);
+    res.send("Form successfully transmitted !!!");
 ```
+En saisissant une entrée dans l'URL en input, il va apparaitre dans le terminal.
+Question : pourquoi "Form successfully transmitted apparaît-il dans la page et aussi dans postman ?
 
 ## Préparer la base de donnée (postgreSQL)
 
