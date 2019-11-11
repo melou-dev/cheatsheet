@@ -206,7 +206,14 @@ Time: 0.011s
 
 ## 9 - Installer l'ORM Sequelize + initialisation de Sequelize + test de connection
 
+object-relational mapping ou ORM - mes en relation la base de données avec les classes du code et vice-versa.
+
 https://sequelize.org/v5/manual/getting-started.html
+
+dans le terminal: 
+npm install --save sequelize
+npm install --save pg pg-hstore
+
 
 dans app.js
 ```
@@ -227,10 +234,10 @@ db.authenticate()
     console.error("Unable to connect to the database:", err);
   });
 ```
-Pour tester, saisir un input sur le localhost pour affichage du message et mot saisi dans le terminal.
+"Connection has been established successfully." s'affiche dans le terminal.
 
 
-## Déplacer les informations de connection à la base de donnée dans config/database.js
+## 10 - Déplacer les informations de connection à la base de donnée dans config/database.js
 
 mkdir config
 touch config/database.js
@@ -252,7 +259,9 @@ const db = require("./config/database");
 * commit
 
 
-## Création du model Item + cablage d'une requête Sequelize findAll dans la requête post
+## 11 - Création du model Item + cablage d'une requête Sequelize findAll dans la requête post.
+
+"findAll" recherche plusieurs éléments d'une base de données.
 
 mkdir models
 touch models/Item.js
@@ -271,7 +280,8 @@ const Item = db.define("item", {
 
 module.exports = Item;
 ```
-
+JSON.stringify( valeur[, remplaçant [, espace]])
+La méthode JSON.stringify() convertit une valeur JavaScript en chaîne JSON. 
 dans app.js
 ```
 const item = require("./models/Item");
