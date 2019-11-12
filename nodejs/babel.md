@@ -50,6 +50,7 @@ Puis dans le terminal.
 ou
 `npx babel src --out-dir lib`
 
+
 ## Require.
 
 * de Javascript @babel/core :
@@ -63,7 +64,9 @@ babel.transform("code", optionsObject);
 Afficher le reste des options acceptées par l'outil cli en l'exécutant --help. Mais le plus important pour nous en ce moment sont `--plugins` et `--presents`.
 
 
-Résumé :
+## Résumé
+
+Tout peut être configuré sur mesure.
 
 utiliser @babel/cli pour exécuter Babel depuis le terminal, @babel/polyfill pour "Polyfill" ou traduire toutes les nouvelles fonctionnalités JavaScript et le préréglage "Preset" `env` pour inclure uniquement les transformations et les polyfills des fonctionnalités que nous utilisons et qui manquent dans nos navigateurs cibles. 
 
