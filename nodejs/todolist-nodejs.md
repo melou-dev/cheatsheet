@@ -131,8 +131,8 @@ app.post("/", (req, res) => {
     console.log(req.body.item);
     res.send("Form successfully transmitted !!!");
 ```
-En saisissant une entrée dans l'URL en input, il va apparaitre dans le terminal.
-Question : pourquoi "Form successfully transmitted apparaît-il dans la page et aussi dans postman ?
+En saisissant une entrée dans l'URL en input, il va apparaitre dans le terminal, en réponse.
+
 
 ## 8 - Préparer la base de donnée (postgreSQL)
 
