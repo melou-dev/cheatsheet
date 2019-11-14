@@ -72,7 +72,7 @@ puis dans le terminal à la suite de code app.js
 ## 4 - Création de la première route sur la page d'accueil (get)
 
 la fonction est exécutée lorsqu'est appelée page.html et crée un chemin
-Cette méthode permet de récupérer les éléments figurant dans l’url (req pour "request"), et les afficher  à l'adresse url indiquée, page principale "/" (res pour "response").
+Cette méthode permet de récupérer les éléments, et les afficher  à l'adresse url indiquée, page principale "/" (res pour "response").
 
 Dans app.js
 ```
@@ -81,7 +81,7 @@ app.get("/", (req, res) => {
 });
 ```
 ouvrir navigation : localhost:port pour voir afficher "Welcome to todo app node" sur le navigateur.
-npm run dev dans un autre terminal.
+`npm run dev` dans un autre terminal.
 
 * commit
 
@@ -206,7 +206,7 @@ Time: 0.011s
 
 ## 9 - Installer l'ORM Sequelize + initialisation de Sequelize + test de connection
 
-object-relational mapping ou ORM - mes en relation la base de données avec les classes du code et vice-versa.
+object-relational mapping ou ORM - fait le lien entre la base de données et le controleur.
 
 https://sequelize.org/v5/manual/getting-started.html
 
@@ -281,7 +281,8 @@ const Item = db.define("item", {
 module.exports = Item;
 ```
 JSON.stringify( valeur[, remplaçant [, espace]])
-La méthode JSON.stringify() convertit une valeur JavaScript en chaîne JSON. 
+La méthode JSON.stringify() convertit une valeur JavaScript en chaîne JSON.
+
 dans app.js
 ```
 const item = require("./models/Item");
@@ -296,7 +297,7 @@ app.post("/", (req, res) => {
 });
 ```
 
-## Modification de la requête post pour insertion du contenu de l'input dans la bdd avec Sequelize
+## 12 - Modification de la requête post pour insertion du contenu de l'input dans la bdd avec Sequelize
 
 dans app.js
 ```
@@ -313,7 +314,7 @@ app.post("/", (req, res) => {
 });
 ```
 
-## Ajouter un findAll de Sequelize dans la requête get de l'accueil et afficher le contenu dans la console
+## 13 - Ajouter un findAll de Sequelize dans la requête get de l'accueil et afficher le contenu dans la console
 
 ```
 app.get("/", (req, res) => {
@@ -323,9 +324,9 @@ app.get("/", (req, res) => {
   
     res.send(`<!DOCTY
 ```
-text en rouge ok.
 
-## Déplacer le template Bootstrap HTML dans la requête findAll à la place de la ligne console.log
+
+## 14 - Déplacer le template Bootstrap HTML dans la requête findAll à la place de la ligne console.log
 
 ```
 app.get("/", (req, res) => {
@@ -333,7 +334,7 @@ app.get("/", (req, res) => {
     res.send(`<!DOCT
 ```
 
-## Remplacer les items écrit en dur dans le template HTML par ceux enregistrés en bdd
+## 15 - Remplacer les items écrit en dur dans le template HTML par ceux enregistrés en bdd
 
 Dans app.js bootstap
 ```
@@ -353,7 +354,9 @@ ${items
 </ul>
 ```
 
-## Création du fichier statique edit.js dans public + ajout d'un écouteur d'évènement click sur le bouton Edit
+## 16 - Création du fichier statique edit.js dans public + ajout d'un écouteur d'évènement click sur le bouton Edit
+
+Dans public on classe les fichiers statiques : HTML, CSS et JS.
 
 mkdir public
 mkdir cd public
@@ -368,8 +371,7 @@ document.addEventListener("click", function(e){
     }
 });
 ```
-
-## Ajout d'un prompt dans l'écouteur d'évènement + affichage du contenu dans la console du navigateur
+Servir les fichiers static, par exemple HTML, CSS et JavaScript par le middleware `express.static`.
 
 Dans app.js
 ```
@@ -383,28 +385,38 @@ et
     </html>`)
 ```
 
-## Ajout du CDN de la librairie Axios dans le template Bootstrap
+
+## 17 - Ajout d'un prompt dans l'écouteur d'évènement + affichage du contenu dans la console du navigateur
+
+```
+document.addEventListener("click", function(e) {
+  if (e.target.classList.contains("edit-me")) {
+    let userInput = prompt("Veuillez entrer votre nouvelle tâche ...");
+    console.log(userInput);
+  }
+});
+```
+
+## 18 - Ajout du CDN de la librairie Axios dans le template Bootstrap
 
 Computer Network Defense.
 ```
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 ```
 
-## Ajout d'une requête post pour l'url /update-item
+## 19 - Ajout d'une requête post pour l'url /update-item
 
 ```
-app.post("/", (res, req) => {
-  res.send("Test update successfull")
-})
+app.post("/update-item", (res, req) => {
+  res.send("Test update successfull");
+});
 ```
 
-## Ajout d'une requête post depuis edit.js avec Axios qui renvoi le contenu du prompt au serveur + test dans la console de Node
+## 20 - Ajout d'une requête post depuis edit.js avec Axios qui renvoi le contenu du prompt au serveur + test dans la console de Node
 
-ajouter un middleware dans app.js `app.use(express.json());`
-* Exécuter tout type de code.
-* Apporter des modifications aux objets de demande et de réponse.
-* Terminer le cycle de demande-réponse.
-* Appeler la fonction middleware suivant dans la pile.
+ajouter un middleware qui traduit le prompt en .json dans app.js 
+`app.use(express.json());`
+
 
 Dans edit.js
 ```
@@ -422,7 +434,7 @@ Dans edit.js
 });
 ```
 
-## Cabler le bouton Edit pour l'édition de l'item en base de données (récupération de l'id + modification) warning Rechargement obligatoire pour afficher les nouvelles valeurs !!!!
+## 21 - Cabler le bouton Edit pour l'édition de l'item en base de données (récupération de l'id + modification) warning Rechargement obligatoire pour afficher les nouvelles valeurs !!!!
 
 dans app.js
 ```
@@ -451,7 +463,7 @@ axios
         })
 ```
 
-## Cabler le bouton Delete pour la suppression de l'item en base de données (récupération de l'id + suppression) warningRechargement obligatoire pour afficher les nouvelles valeurs !!!!
+## 22 - Cabler le bouton Delete pour la suppression de l'item en base de données (récupération de l'id + suppression) warningRechargement obligatoire pour afficher les nouvelles valeurs !!!!
 
 
 
