@@ -465,6 +465,38 @@ axios
 
 ## 22 - Cabler le bouton Delete pour la suppression de l'item en base de données (récupération de l'id + suppression) warningRechargement obligatoire pour afficher les nouvelles valeurs !!!!
 
+dans app.js
+```
+<button data-id="${item.dataValues.id}" class="delete-me btn btn-danger btn-sm">Delete</button>
+```
+
+```
+app.post("/delete-item", (req, res) => {
+  Item.destroy({
+    where: {
+      id: req.body.id
+    }
+  });
+});
+```
+
+dans edit.js
+```
+if (e.target.classList.contains("delete-me")) {
+    if (confirm("Do you want really delete this item ?")) {
+      axios
+        .post("/delete-item", {
+          id: e.target.getAttribute("data-id")
+        })
+        .then()
+        .catch(err => {
+          console.log(err);
+        });
+    }
+  }
+```
+
+
 
 
 
