@@ -33,7 +33,7 @@ dans le fichier app.js
 
 Création de la dépendance à l'api express
 ```
-const express = require("express);
+const express = require("express");
 ```
 
 Mise en action des modules express à l'appel de l'url.
