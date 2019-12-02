@@ -1,5 +1,9 @@
 # quokka.
 
+https://quokkajs.com/docs/index.html
+
+Permet de faire apparaitre
+
 ouvrir le fichier :
 * javascript Cmd/Ctrl + K, J
 * typescriptCmd/Ctrl + K, T
@@ -7,3 +11,17 @@ ouvrir le fichier :
 activer depuis un fichier existant
 Cmd/Ctrl + K, Q
 
+des carrés pour vérifier l'exécution
+gris - code pas exécuté
+Vert - code exécuté
+Jaune - code partiellement exécuté
+Rouge - code en échec, ne pouvant pas être exécuté.
+
+
+
+`/*?+*/` placé après une expression, cela permet d'étendre l'object.
+
+`/*?*/` log après une expression
+ou `//?`
+
+`a.b()/*?*/.c().d()`
