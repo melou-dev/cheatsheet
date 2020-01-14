@@ -1,5 +1,8 @@
 # MOCHA
 
+https://www.grafikart.fr/tutoriels/presentation-1088
+https://mochajs.org/
+
 ## Connexion.
 
 Vérifier l'installation de npm et nodejs V4 minimum.
@@ -96,7 +99,7 @@ it('should return true if valid user id', function(done){
 });
 ```
 
-## Méthode **beforeEach()** et **afterEach()**.
+## Méthode Hook **beforeEach()** et **afterEach()**.
 
 Pour certains codes il faut parfois exécuter des fonctions avant ou après chaque test pour configurer les conditions préalables avant test ou nettoyager après test, par les méthodes **beforeEach()** et **afterEach()**.
 
@@ -104,12 +107,15 @@ Pour certains codes il faut parfois exécuter des fonctions avant ou après chaq
 beforeEach('Setting up the userList', function(){
   console.log('beforeEach');
   loginController.loadUserList(['abc123','xyz321']);
-});describe('LoginController', function () {
+});
+  describe('LoginController', function () {
 ...
 }
 ```
 
-## TDD & BDD avec **chain**.
+## TDD & BDD avec **chai**.
+
+Chai n'est pas la seule librairie disponible pour gérer les assertions, mais elle offre de nombreuses possibilités d'écriture. Elle s'adaptera ainsi aux goûts de chacun.
 
 **TDD ("Test Driven Development")**, le test vérifie la mise en œuvre des fonctionnalités. Amesure que le code évolue, les tests peuvent donner de faux résultats.
 **BDD ("Behavior Driven Development")** est également une approche axée sur le test, mais diffère en testant le comportement réel du système du point de vue de l'utilisateur final.
